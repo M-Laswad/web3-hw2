@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Calculetr";
+}
+
+<div>
+    <form asp-action="Calculate" method="post">
+        <div>
+            <label>Enter first number:  </label>
+            <input type="number" name="no1" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label>Enter the opertion</label>
+            <select name="op" required>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+        </div>
+
+        <br>
+
+        <div>
+            <label>Enter socond number:</label>
+            <input type="number" name="no2" required>
+        </div>
+
+        <input type="submit"/>
+    </form>
+</div>
+
+<div>
+        <h4>Result:</h4>
+        <p>@ViewBag.Result</p>
+    </div>
